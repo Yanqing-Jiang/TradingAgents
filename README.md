@@ -9,6 +9,7 @@ TradingAgents is a multi-agent LLM trading-research framework created by Tauric 
 LLM agents play analysts, bull and bear researchers, a trader and a risk team, then debate their way to a BUY, SELL or HOLD call.</p>
 
 <p align="center">
+<a href="https://yanqing.app/project/agentic-trade-bot/"><b>Yanqing’s related trading case study</b></a> ·
 <a href="https://github.com/TauricResearch/TradingAgents"><b>Upstream project</b></a> ·
 <a href="https://arxiv.org/abs/2412.20138"><b>Paper (arXiv 2412.20138)</b></a> ·
 <a href="#run-the-cli">Run the CLI</a> ·
@@ -29,6 +30,8 @@ LLM agents play analysts, bull and bear researchers, a trader and a risk team, t
 ## About this fork
 
 This repository is based on upstream commit `13b826a` (2025-10-09), with a separately maintained README. **This README describes the code in this fork, not current upstream.** For the latest features and documentation, use [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents).
+
+For Yanqing’s separate trading project, read the [Agentic Trading Bot case study](https://yanqing.app/project/agentic-trade-bot/). That portfolio project includes IBKR execution and is distinct from this upstream research-framework fork.
 
 All framework design, code, paper and assets are the work of Tauric Research and the upstream contributors (paper authors: Yijia Xiao, Edward Sun, Di Luo, Wei Wang). The upstream demo video is on [YouTube](https://www.youtube.com/watch?v=90gr5lwjIho).
 
