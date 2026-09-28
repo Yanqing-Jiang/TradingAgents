@@ -39,20 +39,12 @@ All framework design, code, paper and assets are the work of Tauric Research and
 TradingAgents mirrors the roles of a trading firm. For one ticker and one date, [`tradingagents/graph/setup.py`](tradingagents/graph/setup.py) builds this LangGraph workflow:
 
 ```mermaid
-flowchart LR
-  subgraph A[Analyst team]
-    M[Market] --> S[Social] --> N[News] --> F[Fundamentals]
-  end
-  F --> BR[Bull researcher]
-  BR <-->|debate rounds| BE[Bear researcher]
-  BR --> RM[Research manager]
-  BE --> RM
-  RM --> T[Trader]
-  T --> RK[Risky]
-  RK --> SF[Safe] --> NE[Neutral]
-  NE -->|next round| RK
-  RK & SF & NE --> RJ[Risk judge]
-  RJ --> D([BUY / SELL / HOLD])
+flowchart TD
+  A["Analysts<br/>Market → Social → News → Fundamentals"]
+  A --> B["Research debate<br/>Bull ↔ Bear → Research manager"]
+  B --> T["Trader<br/>Proposed trading plan"]
+  T --> R["Risk debate<br/>Risky → Safe → Neutral"]
+  R --> J["Risk judge<br/>Final decision → BUY / SELL / HOLD"]
 ```
 
 The analysts run one after another in `selected_analysts` order (all four by default). The bull and bear researchers alternate for `max_debate_rounds`. The risky, safe and neutral debaters take turns for `max_risk_discuss_rounds` before the judge rules.
